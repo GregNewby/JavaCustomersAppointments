@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="555.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="179.0" layoutY="69.0" prefHeight="306.0" prefWidth="150.0" spacing="20.0">
+         <children>
+            <TextField fx:id="addApptId" editable="false" opacity="0.8" />
+            <TextField fx:id="addApptTitle" />
+            <TextField fx:id="addApptDescription" />
+            <TextField fx:id="addApptLocation" />
+            <TextField fx:id="addApptType" />
+            <TextField fx:id="addApptStart" promptText="HH:mm" />
+            <TextField fx:id="addApptEnd" promptText="HH:mm" />
+            <ComboBox fx:id="addApptContact" onAction="#onContactComboBox" prefWidth="150.0" />
+            <ComboBox fx:id="addApptCustomer" onAction="#onCustComboBox" prefWidth="150.0" />
+            <ComboBox fx:id="addApptUser" onAction="#onUserComboBox" prefWidth="150.0" />
+         </children>
+      </VBox>
+      <Button fx:id="addApptCancelBtn" layoutX="457.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#onClickGoToMainView" text="Cancel" />
+      <Button fx:id="addApptSaveBtn" layoutX="356.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#onClickAddApptToList" text="Save" />
+      <Label fx:id="addAppointmentLbl" layoutX="117.0" layoutY="22.0" text="Add Appointment">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="66.0" layoutY="69.0" prefHeight="337.0" prefWidth="96.0" spacing="28.0">
+         <children>
+            <Label fx:id="apptIDLbl" text="Appt ID" />
+            <Label fx:id="apptTitleLbl" text="Title" />
+            <Label fx:id="apptDescriptionLbl" text="Desciption" />
+            <Label fx:id="apptLocationLbl" text="Location" />
+            <Label fx:id="apptTypeLbl" text="Type" />
+            <Label fx:id="apptStartLbl" text="Start Time" />
+            <Label fx:id="apptEndLbl" text="End Time" />
+            <Label fx:id="apptContactLbl" text="Contact ID" />
+            <Label fx:id="apptCustLbl" text="Cust ID" />
+            <Label fx:id="apptUserLbl" text="User ID" />
+         </children>
+      </VBox>
+      <DatePicker fx:id="dateOfAppointment" layoutX="356.0" layoutY="297.0" />
+      <Label fx:id="dateOfApptLbl" layoutX="387.0" layoutY="269.0" text="Date of Appointment" />
+   </children>
+</AnchorPane>

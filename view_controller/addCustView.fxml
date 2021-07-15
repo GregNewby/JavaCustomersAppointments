@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="456.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="179.0" layoutY="69.0" prefHeight="306.0" prefWidth="150.0" spacing="20.0">
+         <children>
+            <TextField fx:id="addCustId" editable="false" />
+            <TextField fx:id="addCustName" />
+            <TextField fx:id="addCustAddress" />
+            <ComboBox fx:id="addCustCountry" onAction="#onCountryComboBox" prefWidth="150.0" />
+            <ComboBox fx:id="addCustState" onAction="#onFLDComboBox" prefWidth="150.0" />
+            <TextField fx:id="addCustPostal" />
+            <TextField fx:id="addCustPhone" />
+            <TextField fx:id="addCustCreatedBy" />
+         </children>
+      </VBox>
+      <Button fx:id="addCustCancelBtn" layoutX="479.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#onClickGoToMainView" text="Cancel" />
+      <Button fx:id="addCustSaveBtn" layoutX="369.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#onClickAddCustToList" text="Save" />
+      <Label fx:id="addCustLbl" layoutX="117.0" layoutY="22.0" text="Add Customer">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="66.0" layoutY="69.0" prefHeight="305.0" prefWidth="78.0" spacing="28.0">
+         <children>
+            <Label fx:id="custIDLbl" text="Cust ID" />
+            <Label fx:id="custNameLbl" text="Name" />
+            <Label fx:id="custAddrLbl" text="Street Address" />
+            <Label fx:id="custCountryLbl" text="Country" />
+            <Label fx:id="custStateLbl" text="State/Region" />
+            <Label fx:id="custPostalLbl" text="Postal Code" />
+            <Label fx:id="custPhoneLbl" text="Phone #" />
+            <Label fx:id="custCreatorLbl" text="Created by" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

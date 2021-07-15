@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="456.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="179.0" layoutY="69.0" prefHeight="306.0" prefWidth="150.0" spacing="20.0">
+         <children>
+            <TextField fx:id="modCustId" editable="false" />
+            <TextField fx:id="modCustName" />
+            <TextField fx:id="modCustAddress" />
+            <ComboBox fx:id="modCustCountry" onAction="#onCountryComboBox" prefWidth="150.0" />
+            <ComboBox fx:id="modCustState" onAction="#onFLDComboBox" prefWidth="150.0" />
+            <TextField fx:id="modCustPostal" />
+            <TextField fx:id="modCustPhone" />
+            <TextField fx:id="modCustCreatedBy" />
+         </children>
+      </VBox>
+      <Button fx:id="modCustCancelBtn" layoutX="490.0" layoutY="393.0" mnemonicParsing="false" onMouseClicked="#onClickGoToMainView" text="Cancel" />
+      <Button fx:id="modCustSaveBtn" layoutX="376.0" layoutY="393.0" mnemonicParsing="false" onMouseClicked="#onClickAddCustToList" text="Save" />
+      <Label fx:id="modCustLbl" layoutX="117.0" layoutY="22.0" text="Modify Customer">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="66.0" layoutY="69.0" prefHeight="305.0" prefWidth="78.0" spacing="28.0">
+         <children>
+            <Label fx:id="custIDLbl" text="Cust ID" />
+            <Label fx:id="custNameLbl" text="Name" />
+            <Label fx:id="custAddrLbl" text="Street Address" />
+            <Label fx:id="custCountryLbl" text="Country" />
+            <Label fx:id="custStateLbl" text="State/Region" />
+            <Label fx:id="custPostalLbl" text="Postal Code" />
+            <Label fx:id="custPhoneLbl" text="Phone #" />
+            <Label fx:id="custCreatorLbl" text="Created by" />
+         </children>
+      </VBox>
+      <TableView fx:id="asocApptTbl" layoutX="376.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="apptStartTime" prefWidth="92.5999755859375" text="Start Time" />
+          <TableColumn fx:id="apptId" prefWidth="55.400054931640625" text="Appt ID" />
+            <TableColumn fx:id="apptTitle" prefWidth="48.60003662109375" text="Title" />
+        </columns>
+      </TableView>
+      <Label fx:id="custApptsLbl" layoutX="411.0" layoutY="60.0" text="Customer Appointments" />
+      <Button fx:id="deleteApptBtn" layoutX="436.0" layoutY="298.0" mnemonicParsing="false" onMouseClicked="#onClickRemoveAsocAppt" text="Delete Appt" />
+   </children>
+</AnchorPane>

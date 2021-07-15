@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="376.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ComboBox fx:id="contactComboBox" layoutX="224.0" layoutY="173.0" onAction="#onShowAppts" opacity="0.75" prefHeight="26.0" prefWidth="206.0" promptText="Select a contact." />
+      <TableView fx:id="contactScheduleTbl" layoutX="30.0" layoutY="209.0" prefHeight="142.0" prefWidth="371.0">
+        <columns>
+          <TableColumn fx:id="apptId" prefWidth="48.79998970031738" text="Appt ID" />
+          <TableColumn fx:id="apptTitle" prefWidth="44.0" text="Title" />
+            <TableColumn fx:id="apptType" prefWidth="36.79998016357422" text="Type" />
+            <TableColumn fx:id="apptDescription" prefWidth="69.5999755859375" text="Description" />
+            <TableColumn fx:id="apptStartTime" prefWidth="68.79998779296875" text="Start Time" />
+            <TableColumn fx:id="apptEndTime" prefWidth="57.60003662109375" text="End Time" />
+            <TableColumn fx:id="custID" prefWidth="46.399981689453114" text="Cust ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="mainBtn" layoutX="419.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#goToMainView" text="Back " />
+      <Label fx:id="customerLbl" layoutX="30.0" layoutY="143.0" prefHeight="18.0" prefWidth="268.0" text="Total number of customers in Database:" />
+      <Label fx:id="numberOfApptsTxt" layoutX="30.0" layoutY="74.0" text="Total number of appointments by " />
+      <Label fx:id="reportsLbl" layoutX="199.0" layoutY="20.0" text="Reports" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numberOfTypeAppts" editable="false" layoutX="366.0" layoutY="103.0" prefHeight="26.0" prefWidth="106.0" />
+      <TextField fx:id="numberOfCustomers" editable="false" layoutX="366.0" layoutY="139.0" prefHeight="26.0" prefWidth="106.0" />
+      <ComboBox fx:id="apptTypeComboBox" layoutX="366.0" layoutY="69.0" onAction="#onShowTypeNumber" opacity="0.75" prefHeight="26.0" prefWidth="106.0" promptText="type" />
+      <Label fx:id="typeLbl" layoutX="354.0" layoutY="74.0" text="&amp;" />
+      <Label fx:id="contactLbl" layoutX="30.0" layoutY="178.0" text="Schedule for contact listed below:" />
+      <ComboBox fx:id="monthComboBox" layoutX="243.0" layoutY="69.0" onAction="#onActionShowMonth" opacity="0.75" prefHeight="26.0" prefWidth="106.0" promptText="Month" />
+      <Label fx:id="helpNote" layoutX="30.0" layoutY="107.0" text="(Select the month first and then select type)...................." />
+   </children>
+</AnchorPane>

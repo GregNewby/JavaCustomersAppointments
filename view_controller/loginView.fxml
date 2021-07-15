@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="379.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="509.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="programTitle" alignment="CENTER" prefHeight="185.0" prefWidth="538.0" text="C-BASE Appointment System. Please Log-In using correct user credentials." textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <VBox prefHeight="280.0" prefWidth="635.0">
+               <children>
+                  <HBox prefHeight="278.0" prefWidth="600.0">
+                     <children>
+                        <VBox prefHeight="265.0" prefWidth="250.0" spacing="40.0">
+                           <children>
+                              <Label fx:id="userIDTxt" prefHeight="20.0" prefWidth="126.0" text="User ID">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="passwordLogin" prefHeight="20.0" prefWidth="139.0" text="Password">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="errorTxt" prefHeight="60.0" prefWidth="140.0" textFill="RED" />
+                           </children>
+                           <padding>
+                              <Insets left="80.0" top="60.0" />
+                           </padding></VBox>
+                        <VBox prefHeight="265.0" prefWidth="363.0" spacing="30.0">
+                           <children>
+                              <HBox prefHeight="21.0" prefWidth="242.0">
+                                 <children>
+                                    <Label fx:id="locationTxt" text="Location: " textFill="#002fff" />
+                                    <Label fx:id="locationLbl" textFill="#002fff" />
+                                 </children>
+                              </HBox>
+                              <TextField fx:id="userTxt" prefHeight="27.0" prefWidth="337.0" />
+                              <PasswordField fx:id="passwordTxt" />
+                              <HBox alignment="CENTER" prefHeight="63.0" prefWidth="242.0" spacing="30.0">
+                                 <children>
+                                    <Button fx:id="loginBtn" mnemonicParsing="false" onMouseClicked="#onClickGoToMain" text="Log-In" />
+                                    <Button fx:id="exitBtn" mnemonicParsing="false" onMouseClicked="#onClickExitProgram" text="Exit" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

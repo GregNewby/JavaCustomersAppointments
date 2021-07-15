@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="676.0" prefWidth="840.0" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox pickOnBounds="false" prefHeight="594.0" prefWidth="727.0" spacing="10.0">
+         <children>
+            <Label fx:id="welcomeTxt" text="Welcome,">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="LoginId">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="257.0" prefWidth="734.0" style="-fx-border-color: gray;">
+               <children>
+                  <HBox layoutX="554.0" layoutY="224.0" prefWidth="152.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="addCustBtn" mnemonicParsing="false" onMouseClicked="#onClickGoToAddCust" text="Add" />
+                        <Button fx:id="modCustBtn" mnemonicParsing="false" onMouseClicked="#onClickGoToModCust" text="Modify" />
+                        <Button fx:id="deleteCustBtn" mnemonicParsing="false" onMouseClicked="#onClickDeleteCust" text="Delete" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="searchCustBar" layoutX="548.0" layoutY="12.0" onAction="#onActionCustSearch" prefHeight="23.0" prefWidth="164.0" promptText="Search" />
+                  <TableView fx:id="custTbl" layoutX="14.0" layoutY="49.0" prefHeight="168.0" prefWidth="698.0">
+                    <columns>
+                      <TableColumn fx:id="custId" prefWidth="46.4000244140625" text="Cust ID" />
+                      <TableColumn fx:id="custName" prefWidth="155.1999740600586" text="Cust Name" />
+                        <TableColumn fx:id="custAddress" prefWidth="177.20001220703125" text="Address" />
+                        <TableColumn fx:id="custFLD" prefWidth="123.60000610351562" text="First-Level Division" />
+                        <TableColumn fx:id="custPostalCode" prefWidth="87.199951171875" text="Postal Code" />
+                        <TableColumn fx:id="custPhone" prefWidth="111.20001220703125" text="Phone#" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="customersTxt" layoutX="14.0" layoutY="10.0" text="Customers">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="257.0" prefWidth="734.0" style="-fx-border-color: gray;">
+               <children>
+                  <HBox layoutX="556.0" layoutY="225.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="addApptBtn" mnemonicParsing="false" onMouseClicked="#onClickGoToAddAppt" text="Add" />
+                        <Button fx:id="modApptBtn" mnemonicParsing="false" onMouseClicked="#onClickGoToModAppt" text="Modify" />
+                        <Button fx:id="deleteApptBtn" mnemonicParsing="false" onMouseClicked="#onClickDeleteAppt" text="Delete" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="592.0" layoutY="12.0" prefHeight="26.0" prefWidth="61.0" />
+                  <TableView fx:id="apptTbl" layoutX="16.0" layoutY="51.0" prefHeight="168.0" prefWidth="698.0">
+                     <columns>
+                        <TableColumn fx:id="apptStartTime" prefWidth="108.40001678466797" text="Start Time" />
+                        <TableColumn fx:id="apptEndTime" prefWidth="107.60000610351562" text="End Time" />
+                        <TableColumn fx:id="apptId" prefWidth="56.0" text="Appt ID" />
+                        <TableColumn fx:id="apptTitle" prefWidth="60.79998779296875" text="Title" />
+                        <TableColumn fx:id="apptDesc" prefWidth="75.0" text="Description" />
+                        <TableColumn fx:id="apptLocation" prefWidth="75.79995727539062" text="Location" />
+                        <TableColumn fx:id="apptContact" prefWidth="70.4000244140625" text="Contact" />
+                        <TableColumn fx:id="apptType" minWidth="0.0" prefWidth="75.199951171875" text="Type" />
+                        <TableColumn fx:id="apptCustId" prefWidth="68.00003662109373" text="Cust ID" />
+                     </columns>
+                  </TableView>
+                  <Label fx:id="apptsTxt" layoutX="14.0" layoutY="10.0" text="Appointments">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="allRadio" layoutX="278.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#radioClicked" text="All">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="monthlyWeekly" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="weeklyRadio" layoutX="461.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#radioClicked" text="Weekly" toggleGroup="$monthlyWeekly" />
+                  <Label fx:id="monthWeek" layoutX="491.0" layoutY="17.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="monthlyRadio" layoutX="357.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#radioClicked" text="Monthly" toggleGroup="$monthlyWeekly" />
+               </children>
+            </AnchorPane>
+            <HBox spacing="5.0">
+               <children>
+                  <Button fx:id="logoutBtn" mnemonicParsing="false" onMouseClicked="#onClickLogOut" text="Log-Out" />
+                  <Button fx:id="reportsBtn" mnemonicParsing="false" onMouseClicked="#onGoToReports" text="Reports" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
