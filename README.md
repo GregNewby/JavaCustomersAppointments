@@ -6,6 +6,9 @@ The purpose of this application is to interface with a database that uses tables
 This application allows you to manage current appointments and customers with the capability to add, modify and delete. The application has language capabilities for
 english and french.
 
+Full-stack java application that retrieves and displays appointments for employees held within a MySQL database. User must first sign in to their portal using their employee login and password then the application will display if there is a meeting with a customer within the next fifteen minutes or not. The employee can then navigate through the GUI to perform CRUD operations on his appointments and customers. The application uses three different local options and offers language modifications as well.
+
+
 @author Greg Newby gnewby1@wgu.edu 9/15/20+version 
 6/28/21
 
